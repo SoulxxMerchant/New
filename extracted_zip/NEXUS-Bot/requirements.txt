@@ -1,4 +1,0 @@
-telethon
-python-telegram-bot[job-queue]
-flask
-telegram
