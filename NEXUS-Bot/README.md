@@ -11,7 +11,33 @@ A powerful Telegram bot for campaign management and bulk messaging through integ
 - **User Limits**: Daily message limits with premium tier support
 - **Inline Keyboard Interface**: Easy-to-use button-based navigation
 
-## Required Environment Variables
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/NEXUS-Bot.git
+cd NEXUS-Bot
+```
+
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+3. Set up environment variables:
+```bash
+cp .env.example .env
+# Edit .env with your credentials
+```
+
+4. Run the bot:
+```bash
+python main.py
+```
+
+## Environment Variables
+
+Copy `.env.example` to `.env` and fill in your credentials:
 
 | Variable | Description |
 |----------|-------------|
@@ -41,19 +67,19 @@ A powerful Telegram bot for campaign management and bulk messaging through integ
 NEXUS-Bot/
 ├── main.py           # Main bot application
 ├── requirements.txt  # Python dependencies
-├── sessions.json     # Integrated session strings
-├── user_data.json    # User data and limits
+├── .env.example      # Environment variables template
+├── .gitignore        # Git ignore rules
+├── LICENSE           # MIT License
 └── README.md         # This file
 ```
 
-## Running the Bot
+## How It Works
 
-The bot runs with a Flask web server on port 5000 for uptime monitoring, while polling Telegram for updates.
-
-```bash
-python main.py
-```
+The bot uses:
+- **python-telegram-bot**: For bot commands and inline keyboards
+- **Telethon**: For session integration and bulk messaging
+- **Flask**: Web server for uptime monitoring (port 5000)
 
 ## License
 
-All rights reserved.
+MIT License - see [LICENSE](LICENSE) for details.

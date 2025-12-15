@@ -25,6 +25,7 @@ venv/
 ENV/
 env/
 .venv/
+.pythonlibs/
 
 # IDE
 .idea/
@@ -33,12 +34,20 @@ env/
 *.swo
 
 # Replit
-.pythonlibs/
 .upm/
 .cache/
+.local/
+.replit
+replit.nix
+replit.md
 
-# Sessions file (contains sensitive data)
+# Sensitive data files
 sessions.json
-
-# Environment
+user_data.json
 .env
+
+# Logs
+*.log
+
+# Attached assets (Replit specific)
+attached_assets/
