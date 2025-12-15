@@ -16,8 +16,6 @@ from telegram.ext import (
     ConversationHandler,
     JobQueue
 )
-# New Flask Imports
-from flask import Flask, request, jsonify
 from threading import Thread
 
 # Telethon imports
@@ -27,21 +25,8 @@ from telethon.tl.functions.messages import GetDialogsRequest
 from telethon.tl.types import InputPeerEmpty
 from telethon.errors import SessionPasswordNeededError, FloodWaitError, PeerFloodError
 
-# --- Flask Setup ---
-app = Flask(__name__)
-
-# This is the endpoint that the Replit Webview and Uptime service will ping
-@app.route('/')
-def home():
-    """Serves a simple status page for Replit to keep the instance awake."""
-    return "🤖 Nexus Telegram Bot is Running and Polling."
-
-def run_flask_app():
-    """Starts the Flask server on the port Replit provides."""
-    # Replit sets the PORT environment variable
-    port = int(os.environ.get('PORT', 5000))
-    # Note: host='0.0.0.0' is required for Replit to properly route traffic
-    app.run(host='0.0.0.0', port=port, debug=False, use_reloader=False)
+# Flask app import
+from app import run_flask_app
 
 # --- Configuration and Global State (Keep this the same) ---
 

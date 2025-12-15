@@ -65,7 +65,8 @@ Copy `.env.example` to `.env` and fill in your credentials:
 
 ```
 NEXUS-Bot/
-├── main.py           # Main bot application
+├── main.py           # Main bot application (Telegram handlers)
+├── app.py            # Flask web server for uptime monitoring
 ├── requirements.txt  # Python dependencies
 ├── .env.example      # Environment variables template
 ├── .gitignore        # Git ignore rules
