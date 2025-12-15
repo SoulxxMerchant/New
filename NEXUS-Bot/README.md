@@ -81,6 +81,24 @@ The bot uses:
 - **Telethon**: For session integration and bulk messaging
 - **Flask**: Web server for uptime monitoring (port 5000)
 
+## Deployment on Render
+
+1. Push this repository to GitHub
+2. Go to [render.com](https://render.com) and create a new **Web Service**
+3. Connect your GitHub repository
+4. Configure the service:
+   - **Build Command:** `pip install -r requirements.txt`
+   - **Start Command:** `python main.py`
+5. Add environment variables in Render dashboard:
+   - `BOT_TOKEN`
+   - `API_ID`
+   - `API_HASH`
+   - `ADMIN_IDS`
+   - `PYTHON_VERSION` = `3.11.0`
+6. Click **Create Web Service**
+
+Your bot will be live and the Flask server will keep it running.
+
 ## License
 
 MIT License - see [LICENSE](LICENSE) for details.
